@@ -17,6 +17,11 @@ namespace MovieStore.Data
                 .HasMany(o => o.Movies)
                 .WithMany()
                 .UsingEntity(x => x.ToTable("OrderMovies"));
+
+
+
+
+
         }
 
             public DbSet<Movie> Movies { get; set; }    
@@ -27,6 +32,8 @@ namespace MovieStore.Data
             public DbSet<Order> Order { get; set; }
             
             public DbSet<Coupon> Coupons { get; set; }
+
+            public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
 
     }
